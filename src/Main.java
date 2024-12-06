@@ -21,5 +21,27 @@ public class Main {
         for (double atual : array){
             System.out.println(atual);
         }
+
+        // Exercicio 2 | Negativos
+        System.out.println("-------------------------------");
+        int n, numberNegativos;
+
+        System.out.printf("Quantos numeros vc vai digitar?: ");
+        n = sc.nextInt();
+
+        int[] vetor = new int[n];
+
+        for (int i = 0; i < n; i++){
+            System.out.printf("Digite um numero: ");
+            vetor[i] = sc.nextInt();
+        }
+
+        System.out.println("NUMERO NEGATIVOS:");
+
+        for(int atual : vetor ){
+            if(atual < 0){
+                System.out.println(atual);
+            }
+        }
     }
 }
