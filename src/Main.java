@@ -43,5 +43,43 @@ public class Main {
                 System.out.println(atual);
             }
         }
+
+
+        System.out.println("-------------------------------");
+        // Exercicio 3 | Soma_vetor
+
+        double   soma, media;
+        int nDigitado;
+
+        soma = 0;
+
+
+        System.out.printf("Quantos numeros voce vai digitar? ");
+        nDigitado = sc.nextInt();
+
+        double[] nArray = new double[nDigitado];
+
+        for(int i = 0; i < nDigitado; i++){
+            System.out.printf("Digite um numero: ");
+            nArray[i] = sc.nextDouble();
+        }
+
+        for (double atual : nArray){
+            soma += atual;
+        }
+
+        System.out.printf("VALORES = ");
+        for (double atual : nArray){
+            System.out.printf("%.1f ", atual);
+        }
+
+        media = soma / nDigitado;
+
+        System.out.printf("\nSOMA = %.2f\n", soma);
+        System.out.printf("MEDIA = %.2f\n", media);
+
+
+
+
     }
 }
