@@ -126,8 +126,33 @@ public class Main {
             }
         }
 
+        System.out.println("-------------------------------");
+        // Exercicio 5 | numeros_pares
 
+        int nDigitado2, paresQntd;
 
+        paresQntd = 0;
+
+        System.out.printf("Quantos numeros vc vai digitar?(numeros_pares)");
+        nDigitado2 = sc.nextInt();
+
+        int[] array2 = new int[nDigitado2];
+
+        for(int i = 0; i < nDigitado2; i++){
+            System.out.printf("Digite um numero:");
+            array2[i] = sc.nextInt();
+        }
+
+        System.out.println("\nNUMEORS PARES");
+
+        for(int atual : array2){
+            if(atual % 2 == 0){
+                System.out.printf("%d ",atual);
+                paresQntd++;
+            }
+        }
+
+        System.out.printf("\nQUANTIDADE DE PARES = %d\n", paresQntd);
 
     }
 }
