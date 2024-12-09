@@ -249,6 +249,39 @@ public class Main {
             }
         }
 
+        System.out.println("-------------------------------");
+        // Exercicio 9 | media pares
+
+        int nElementos2,nPares, somaPares;
+        double mediaPares;
+
+        nPares = 0;
+        somaPares = 0;
+
+        System.out.printf("Quantos elementos vai ter o vetor?(media_pares) ");
+        nElementos2 = sc.nextInt();
+
+        int[] array5 = new int[nElementos2];
+
+        for(int i = 0; i < nElementos2; i++){
+            System.out.printf("Digite um numero: ");
+            array5[i] = sc.nextInt();
+        }
+
+
+        for (int atual : array5){
+            if(atual % 2 == 0){
+                somaPares += atual;
+                nPares++;
+            }
+        }
+
+        if(nPares == 0){
+            System.out.println("NENHUM NUMERO PAR");
+        }else{
+            mediaPares = (double)somaPares / nPares;
+            System.out.printf("MEDIA DOS PARES = %.1f\n", mediaPares);
+        }
 
 
 
