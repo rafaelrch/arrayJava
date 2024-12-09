@@ -152,7 +152,39 @@ public class Main {
             }
         }
 
-        System.out.printf("\nQUANTIDADE DE PARES = %d\n", paresQntd);
+        System.out.printf("\n\nQUANTIDADE DE PARES = %d\n", paresQntd);
+
+
+        System.out.println("-------------------------------");
+        // Exercicio 6 | maior posição
+
+        int nDigitados3, pMaior;
+        double nMaior;
+
+
+        System.out.printf("Quantos numeros voce vai digitar? (maior posição) ");
+        nDigitados3 = sc.nextInt();
+
+        double[] array3 = new double[nDigitados3];
+
+        for(int i = 0; i < nDigitados3; i++){
+            System.out.printf("Digite um numero: ");
+            array3[i] = sc.nextDouble();
+        }
+
+
+        nMaior = array3[0];
+        pMaior = 0;
+
+        for(int i = 0; i < nDigitados3; i++){
+            if(array3[i] > nMaior){
+                nMaior = array3[i];
+                pMaior = i;
+            }
+        }
+
+        System.out.printf("\nMAIOR VALOR = %.1f\n", nMaior);
+        System.out.printf("POSIÇÃO DO MAIOR VALOR = %d\n", pMaior);
 
     }
 }
