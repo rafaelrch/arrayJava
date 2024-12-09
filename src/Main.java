@@ -186,5 +186,36 @@ public class Main {
         System.out.printf("\nMAIOR VALOR = %.1f\n", nMaior);
         System.out.printf("POSIÇÃO DO MAIOR VALOR = %d\n", pMaior);
 
+        System.out.println("-------------------------------");
+        // Exercicio 7 | soma vetores
+
+        int somaVetores, valores;
+
+        System.out.printf("Quantos valores vai ter cada vetor? ");
+        valores = sc.nextInt();
+
+        int[] vetorA = new int[valores];
+        int[] vetorB = new int[valores];
+        int[] vetorC = new int[valores];
+
+        System.out.println("Digite os valores do vetor A:");
+        for(int i = 0; i < valores; i++){
+            vetorA[i] = sc.nextInt();
+        }
+
+        System.out.println("Digite os valores do vetor B:");
+        for(int i = 0; i < valores; i++){
+            vetorB[i] = sc.nextInt();
+        }
+
+
+        System.out.println("VETOR RESULTANTE:");
+        for(int i = 0; i < valores; i++){
+           vetorC[i] = vetorA[i] + vetorB[i];
+            System.out.println(vetorC[i]);
+        }
+
+
+
     }
 }
