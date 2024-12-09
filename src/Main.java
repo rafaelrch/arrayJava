@@ -283,6 +283,41 @@ public class Main {
             System.out.printf("MEDIA DOS PARES = %.1f\n", mediaPares);
         }
 
+        System.out.println("-------------------------------");
+        // Exercicio 10 | mais_velho
+
+        int qntdPessoas, maiorIdade;
+        String  maisVelho = "";
+
+        maiorIdade = -1;
+
+
+
+        System.out.printf("Quantas pessoas você vai digitar? (mais_Velho) ");
+        qntdPessoas = sc.nextInt();
+
+        String[] arrayNome = new String[qntdPessoas];
+        int[] arrayIdade = new int[qntdPessoas];
+
+        for(int i = 0; i < qntdPessoas; i++){
+            System.out.println("Dados da " + (i+1) + "a pessoa:");
+            System.out.printf("Nome: ");
+            arrayNome[i] = sc.next();
+            System.out.printf("Idade: ");
+            arrayIdade[i] = sc.nextInt();
+
+        }
+
+        for(int i = 0; i < qntdPessoas; i++){
+            if(arrayIdade[i] > maiorIdade ){
+                maiorIdade = arrayIdade[i];
+                maisVelho = arrayNome[i];
+
+            }
+        }
+
+        System.out.printf("PESSOA MAIS VELHA: %s\n", maisVelho);
+
 
 
     }
