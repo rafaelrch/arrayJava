@@ -215,6 +215,41 @@ public class Main {
             System.out.println(vetorC[i]);
         }
 
+        System.out.println("-------------------------------");
+        // Exercicio 8 | abaixo da media
+
+        int nElementos;
+        double mediaVetor, somaTotal, abaixo;
+
+        somaTotal = 0.0;
+
+        System.out.printf("Quantos elementos vai ter o vetor? ");
+        nElementos = sc.nextInt();
+
+        double[] array4 = new double[nElementos];
+
+        for (int i = 0; i < nElementos; i++){
+            System.out.printf("Digite um numero: ");
+            array4[i] = sc.nextDouble();
+        }
+
+        for(double atual : array4){
+            somaTotal += atual;
+        }
+
+        mediaVetor = somaTotal / (double)nElementos;
+
+
+        System.out.printf("MEDIA DO VETOR = %.3f\n", mediaVetor);
+        System.out.println("ELEMENTOS ABAIXO DA MEDIA:");
+        for(double atual : array4){
+            if(atual < mediaVetor){
+                abaixo = atual;
+                System.out.println(abaixo);
+            }
+        }
+
+
 
 
     }
