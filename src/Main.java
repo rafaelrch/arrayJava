@@ -319,6 +319,35 @@ public class Main {
         System.out.printf("PESSOA MAIS VELHA: %s\n", maisVelho);
 
 
+        System.out.println("-------------------------------");
+        // Exercicio 11 | aprovados
+
+        int numberDigitado2;
+        double mediaAluno;
+
+        System.out.printf("Quantos alunos serão digitados? ");
+        numberDigitado2 = sc.nextInt();
+
+        String[] alunoNome = new String[numberDigitado2];
+        double[] nota1 = new double[numberDigitado2];
+        double[] nota2 = new double[numberDigitado2];
+
+
+        for (int i = 0; i < numberDigitado2; i++){
+            System.out.println("Digite nome, primeira e segunda nota %do \n" + (i+1));
+            sc.nextLine();
+            alunoNome[i] = sc.nextLine();
+            nota1[i] = sc.nextDouble();
+            nota2[i] = sc.nextDouble();
+        }
+
+        System.out.println("Alunos aprovado:");
+        for(int i = 0; i < numberDigitado2; i++){
+            mediaAluno = (nota1[i] + nota2[i]) / 2;
+            if (mediaAluno > 6 ){
+                System.out.printf("%s\n", alunoNome[i]);
+            }
+        }
 
     }
 }
