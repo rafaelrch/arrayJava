@@ -364,7 +364,7 @@ public class Main {
         pessoasQntd = sc.nextInt();
 
         double[] alturaPessoa = new double[pessoasQntd];
-        String[] generoPessoa = new String[pessoasQntd];
+        char[] generoPessoa = new char[pessoasQntd];
 
 
         for( int i = 0; i < pessoasQntd; i++){
@@ -372,26 +372,27 @@ public class Main {
             alturaPessoa[i] = sc.nextDouble();
             sc.nextLine();
             System.out.printf("Gênero da %dª pessoa: ", (i + 1));
-            generoPessoa[i] = sc.nextLine();
+            generoPessoa[i] = sc.next().charAt(0);
         }
         menorAltura = alturaPessoa[0];
         maiorAltura = alturaPessoa[0];
         for (int i = 0; i < pessoasQntd; i++){
-            if(maiorAltura < alturaPessoa[i]){
+            if(alturaPessoa[i] > maiorAltura){
                 maiorAltura = alturaPessoa[i];
             }
-            if(maiorAltura > alturaPessoa[i]){
+            if(alturaPessoa[i] < menorAltura ){
                 menorAltura = alturaPessoa[i];
             }
 
         }
 
         for (int i = 0; i < pessoasQntd; i++){
-            if(generoPessoa[i] == "F") {
-                somaAltura += alturaPessoa[i];
-                nMulheres++;
-            }else{
+            if(generoPessoa[i] == 'M') {
                 nHomens++;
+            }else{
+                nMulheres++;
+                somaAltura += alturaPessoa[i];
+
             }
 
 
@@ -402,7 +403,7 @@ public class Main {
         System.out.printf("Menor altura = %.2f\n", menorAltura);
         System.out.printf("Maior altura = %.2f\n", maiorAltura);
         System.out.printf("Media das alturas das mulheres = %.2f\n", mediaAlturaM);
-        System.out.printf("Numero de homens = %d\n", mediaAlturaM);
+        System.out.printf("Numero de homens = %d\n", nHomens);
 
 
 
