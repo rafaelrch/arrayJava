@@ -406,6 +406,71 @@ public class Main {
         System.out.printf("Numero de homens = %d\n", nHomens);
 
 
+        System.out.println("-------------------------------");
+        // Exercicio 13 | comerciante
+
+        int nProdutos, lucroAbaixo, lucroEntre, lucroAcima;
+        double compraTotal, vendaTotal, lucroTotal;
+
+        lucroAbaixo = 0;
+        lucroEntre = 0;
+        lucroAcima = 0;
+
+        vendaTotal = 0;
+        compraTotal = 0;
+
+        lucroTotal = 0;
+
+
+        System.out.printf("Serão digitados dados de quantos produtos? (comerciante) ");
+        nProdutos = sc.nextInt();
+
+        String[] nomeProduto = new String[nProdutos];
+        double[] precoCompra = new double[nProdutos];
+        double[] precoVenda = new double[nProdutos];
+        double[] porcentagemLucros = new double[nProdutos];
+
+
+        for (int i = 0; i < nProdutos; i++){
+            System.out.println("Produto " + (i+1) + ":");
+            System.out.printf("Nome: ");
+            sc.nextLine();
+            nomeProduto[i] = sc.nextLine();
+            System.out.printf("Preço de compra: ");
+            precoCompra[i] = sc.nextDouble();
+            System.out.printf("Preço de venda: ");
+            precoVenda[i] = sc.nextDouble();
+        }
+
+        for (int i = 0; i < nProdutos; i++){
+            porcentagemLucros[i] = (precoCompra[i] * precoVenda[i]) / 100;
+        }
+
+        for (int i = 0; i < nProdutos; i++){
+            if(porcentagemLucros[i] < 10.0 ){
+                lucroAbaixo++;
+            }else if(porcentagemLucros[i] < 20.0){
+                lucroEntre++;
+            }else{
+                lucroAcima++;
+            }
+
+            compraTotal +=  precoCompra[i];
+            vendaTotal += precoVenda[i];
+
+        }
+
+        lucroTotal += vendaTotal - compraTotal;
+
+        System.out.println("\nRELATÓRIO:");
+        System.out.printf("Lucro abaixo de 10%%: %d\n", lucroAbaixo);
+        System.out.printf("Lucro entre 10%% e 20%%: %d\n", lucroEntre);
+        System.out.printf("Lucro acima de 20%%: %d\n", lucroAcima);
+        System.out.printf("Valor total de compra: %.2f\n", compraTotal);
+        System.out.printf("Valor total de venda: %.2f\n", vendaTotal);
+        System.out.printf("Lucro total: %.2f\n", lucroTotal);
+
+
 
     }
 }
